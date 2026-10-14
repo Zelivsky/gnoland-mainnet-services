@@ -1,9 +1,9 @@
 # Gnoland Mainnet Peers
 
-**Height:** 792191
+**Height:** 792435
 **Peers:** 57
 
-Last updated: 2026-10-14 05:54 UTC | Verified: 57/72
+Last updated: 2026-10-14 06:09 UTC | Verified: 57/72
 
 ## How we collect peers
 
