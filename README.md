@@ -15,6 +15,7 @@ Public infrastructure and tools for [Gnoland](https://github.com/gnolang/gno) ma
 | 3 | [Peers List](#peers-list) | [peers.md](peers.md) (auto-updated every 6h) | 🟢 Active |
 | 4 | [Installation Guide](#installation-guide) | [guide.md](guide.md) | 🟢 Active |
 | 5 | [Official Seeds](#official-seeds) | `seed-1.gno.land`, `seed-2.gno.land` | 🟢 Active |
+| 6 | [Validator Monitor Bot](#validator-monitor-bot) | [@gnoland_monitor_apollo_bot](https://t.me/gnoland_monitor_apollo_bot) | 🟢 Active |
 
 ---
 
@@ -140,6 +141,30 @@ gnoland start --chainid gnoland-1 --genesis genesis.json --skip-genesis-sig-veri
 ```
 
 > **Version pinning**: always use the version required by `misc/deployments/mainnet.gno.land/UPGRADES.md` (currently **v1.5.0**, halt height 162200). Never use floating tags — a wrong binary causes AppHash mismatch.
+
+---
+
+## Validator Monitor Bot
+
+Telegram bot monitoring Gnoland mainnet (gnoland-1) — and the Onyx testnet from the same bot: node health, missed-block alerts, peers and snapshots.
+
+**Bot:** [@gnoland_monitor_apollo_bot](https://t.me/gnoland_monitor_apollo_bot)
+
+Missed-block alerts are **watchlist-based**: you get an alert only for validators
+you add with `/add` — on every network where that validator is active.
+
+**Commands:**
+| Command | Description |
+|---------|-------------|
+| `/status` | Status of both networks (mainnet + Onyx) |
+| `/peers` | Live peers + verified list timestamp |
+| `/snapshot` | Latest snapshots of both networks |
+| `/add <moniker or address>` | Watch a validator on every network where active |
+| `/remove <moniker or address>` | Remove from watchlist |
+| `/list` | Your watchlist with active-set status |
+| `/check` | Uptime check for your watchlist |
+| `/map <moniker or address>` | Validator info lookup |
+| `/threshold <n>` | Missed-blocks alert threshold |
 
 ---
 
